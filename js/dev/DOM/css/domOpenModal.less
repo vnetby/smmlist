@@ -1,0 +1,64 @@
+.dom-modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+
+  background-color: #fff;
+  transition-duration: 0.3s;
+  opacity: 0;
+
+  transition-timing-function: ease-in-out;
+
+  left: 0;
+  transform: translateX(100%);
+  opacity: 1;
+  &.active {
+    opacity: 1;
+    transform: none;
+  }
+
+  .close-modal-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    z-index: 30;
+  }
+
+  .hamburger {
+    padding: 0;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner:after,
+  .hamburger-inner:before {
+    width: 24px;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner:after,
+  .hamburger-inner:before {
+    height: 2px;
+  }
+
+  .dom-custom-scrollbar {
+    height: 100%;
+  }
+
+  .os-content {
+    display: flex;
+    flex-direction: column;
+    & > * {
+      margin-top: auto;
+      margin-bottom: auto;
+      flex-shrink: 0;
+      flex-grow: 0;
+      width: 100%;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+}

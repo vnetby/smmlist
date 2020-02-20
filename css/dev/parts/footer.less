@@ -1,0 +1,134 @@
+/*==============================================================
+*												FOOTER
+=============================================================== */
+.footer {
+  background-color: @c-grey3;
+  padding-top: 35px;
+  line-height: 1.4;
+  .links-container {
+    &:extend(.fs-19);
+    padding-bottom: 15px;
+    a:hover {
+      color: @c-red;
+    }
+  }
+
+  .menus-row {
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+      @media (min-width: @min_xxl) {
+        flex: 1;
+      }
+      @media (max-width: @max_xxl) {
+        width: 25%;
+      }
+      @media (max-width: @max_xl) {
+        width: 50%;
+      }
+      @media (max-width: @max_md) {
+        width: 100%;
+      }
+    }
+  }
+
+  .menu-col .line {
+    .col-space-property(left);
+  }
+
+  .foot-link-row,
+  .foot-title {
+    margin-bottom: 10px;
+    &:extend(.fs-19);
+  }
+  .foot-link-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .title-row {
+    font-weight: bold;
+  }
+
+  .foot-contacts-col {
+    .foot-link-row {
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .addroffice-row,
+  .addrstore-row {
+    .title-row {
+      margin-bottom: 5px;
+    }
+  }
+
+  .socials-row {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: @max_xl) {
+      display: block;
+
+      .left-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+    }
+
+    .right-col {
+      display: flex;
+      align-items: center;
+      @media (max-width: @max_xl) {
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      @media (max-width: @max_md) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .soc-title {
+      margin: 0;
+      &:extend(.fs-28);
+      padding-right: 20px;
+      text-transform: uppercase;
+      @media (max-width: @max_md) {
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .ico.soc-ico,
+  .ico.soc-ico svg {
+    height: auto !important;
+    width: 50px !important;
+  }
+
+  .bottom-bar {
+    background-color: #fff;
+    padding: 35px 0;
+  }
+
+  .bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: -20px;
+    & > * {
+      margin: 0 30px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+  }
+}

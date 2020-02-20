@@ -1,0 +1,7 @@
+node_modules
+.git
+wp-admin
+wp-includes
+.backup.js
+wp-config.php
+.siteconf.json

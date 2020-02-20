@@ -1,0 +1,125 @@
+.dom-slider {
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  position: relative;
+  width: 100%;
+
+  .draggable {
+    position: relative;
+    &.in-drag {
+      user-select: none;
+      cursor: grabbing;
+    }
+  }
+
+  &.init {
+    opacity: 1;
+  }
+
+  .slider-arrow {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 45px / 2);
+    display: flex;
+    align-items: center;
+    justify-content: ceter;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    &:after {
+      display: block;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 0;
+      padding-bottom: 2px;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .prev-arrow {
+    left: 10px;
+    &:after {
+      content: "<";
+    }
+  }
+  .next-arrow {
+    right: 10px;
+    &:after {
+      content: ">";
+    }
+  }
+
+  .slider-outher {
+    width: auto;
+    display: flex;
+    align-items: stretch;
+    will-change: transform;
+  }
+  .slide {
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  .slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dots-slider {
+    display: block;
+  }
+
+  .slide-dot {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 0;
+    display: block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:focus {
+      outline: none;
+    }
+
+    &.active-dot {
+      transform: scale(1.2);
+      background-color: #fff;
+    }
+  }
+
+  &.variable-height {
+    .slider-outher {
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  &.vertical-slidier {
+    .slider-outher {
+      flex-direction: column;
+    }
+  }
+}
