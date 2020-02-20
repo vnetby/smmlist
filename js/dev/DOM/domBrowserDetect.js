@@ -48,8 +48,10 @@ const initDeviceDetect = () => {
   if (isTablet) {
     className = 'device-tablet';
   }
+  let bodyClass = document.body.getAttribute('class');
+  bodyClass = bodyClass ? bodyClass : '';
 
-  document.body.setAttribute('class', document.body.getAttribute('class').replace(/device-desktop|device-mobile|device-tablet/, ''));
+  document.body.setAttribute('class', bodyClass.replace(/device-desktop|device-mobile|device-tablet/, ''));
   document.body.classList.add(className);
 }
 

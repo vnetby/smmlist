@@ -1,14 +1,9 @@
 body {
-  font-family: "roboto";
-  font-size: 16px;
+  font-family: "Rubik";
+  font-size: 18px;
   font-weight: normal;
-  color: @c-black;
-  background-color: @c-grey3;
   scroll-behavior: smooth;
   overflow: auto;
-  @media (max-width: @max_md) {
-    font-size: 14px;
-  }
 }
 html {
   overflow: visible;
@@ -17,18 +12,18 @@ body,
 html {
   height: 100%;
 }
-.bold {
-  font-weight: bold !important;
-}
-.page-title {
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 30px;
-}
 
 a,
 a:visited {
-  color: @c-black;
   transition: 0.3s;
   text-decoration: none;
+}
+
+.gilroy {
+  font-family: "Gilroy";
+}
+
+.btn {
+  &:extend(.gilroy);
+  padding: 16px 44px;
 }

@@ -4,12 +4,12 @@ const SITE_CONF = JSON.parse(fs.readFileSync('.siteconf.json'));
 const ABSPATH = `./${SITE_CONF.SRC}/assets`;
 
 const assets = [
-  // "jquery3",
-  "hamburgers",
-  "animate-css",
-  "fancybox",
-  "slick",
-  "niceSelect"
+  "jquery3",
+  // "hamburgers",
+  "animate-css"
+  // "fancybox",
+  // "slick",
+  // "niceSelect"
   // "parallax"
   // "overlay-scrollbar",
   // "chart-js",
